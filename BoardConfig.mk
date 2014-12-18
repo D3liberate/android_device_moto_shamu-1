@@ -105,6 +105,24 @@ TARGET_RECOVERY_FSTAB = device/moto/shamu/fstab.shamu
 
 TARGET_RELEASETOOLS_EXTENSIONS := device/moto/shamu
 
+RECOVERY_VARIANT := twrp
+
+# TWRP
+DEVICE_RESOLUTION := 1440x2560
+TW_INCLUDE_CRYPTO := true
+BOARD_HAS_NO_REAL_SDCARD := true
+RECOVERY_GRAPHICS_USE_LINELENGTH := true
+TARGET_RECOVERY_PIXEL_FORMAT := "RBG_565"
+TW_SCREEN_BLANK_ON_BOOT := true
+RECOVERY_SDCARD_ON_DATA := true
+TW_NO_USB_STORAGE := false
+RECOVERY_GRAPHICS_USE_LINELENGTH := true
+
+# The real path for this is /sys/devices/mdp.0/qcom,cmdss_fb_primary.160/leds/lcd-backlight/brightness but the comma doesn't compile correctly
+#TW_BRIGHTNESS_PATH := "/sys/devices/mdp.0/qcom\x2cmdss_fb_primary.160/leds/lcd-backlight/brightness"
+#TW_MAX_BRIGHTNESS := 255
+#TW_NO_SCREEN_TIMEOUT := true
+
 # Support Native Layer RF cutback
 BOARD_USES_CUTBACK_IN_RILD := true
 
