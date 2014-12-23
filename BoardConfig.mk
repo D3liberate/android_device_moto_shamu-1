@@ -123,6 +123,9 @@ RECOVERY_GRAPHICS_USE_LINELENGTH := true
 #TW_MAX_BRIGHTNESS := 255
 #TW_NO_SCREEN_TIMEOUT := true
 
+# Enable workaround for slow rom flash
+BOARD_SUPPRESS_SECURE_ERASE := true
+
 # Support Native Layer RF cutback
 BOARD_USES_CUTBACK_IN_RILD := true
 
