@@ -16,5 +16,4 @@
 /aboot       emmc    /dev/block/platform/msm_sdcc.1/by-name/aboot
 /versions    emmc    /dev/block/platform/msm_sdcc.1/by-name/versions
 /logo        emmc    /dev/block/platform/msm_sdcc.1/by-name/logo
-/usb-otg     vfat    /dev/block/sda1     /dev/block/sda
-
+/usb-otg     vfat    /dev/block/sda1     /dev/block/sda                   flags=removable;storage;display=USB-OTG
