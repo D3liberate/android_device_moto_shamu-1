@@ -128,6 +128,8 @@ on early-boot
     write /sys/bus/msm_subsys/devices/subsys3/restart_level "related"
     write /sys/bus/msm_subsys/devices/subsys3/recovery_policy "skip_restart"
 
+    write /sys/android_touch/doubletap2wake "1"
+
 on boot
     insmod /system/lib/modules/adsprpc.ko
     insmod /system/lib/modules/mhi.ko
@@ -506,6 +508,7 @@ service gsiff_daemon /system/vendor/bin/gsiff_daemon
 
 on property:sys.boot_completed=1
     start qcom-post-boot
+    write /sys/module/sync/parameters/fsync_enabled "N"
     # Restart mm-qcamera-daemon to make sure it's properly initialized
     restart qcamerasvr
 
